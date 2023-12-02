@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Flexbox Pricing Table</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sono:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Sono', sans-serif;
+      background-color: rgb(200, 247, 247);
+
+    }
+    
+    .pricing-container{
+      display: flex;
+      justify-content: space-around; /* cria um espaço igual entre o conteúdo*/
+      align-items: center; 
+      height: 100vh;
+      gap: 2rem;
+
+    }
+    .pricing-plan{
+      display: flex;
+      flex-direction: column; /*se flex-direction: row ou row-reverse, justify serar horizontal*/
+      flex-basis: 400px; 
+      background-color: burlywood;
+      text-align: center;
+      border-radius: 20px;
+    }
+    .plan-title{
+      display: flex;
+      justify-content: center;
+      font-size: x-large;
+      font-weight: 900;
+      padding: 10px 1px;
+      background-color: orangered;
+      color: white;
+      margin: 20px 40px;
+      border-radius: 20px;
+    }
+    .plan-price{
+      font-size: x-large;
+      font-weight: 600;
+      color: rgb(0, 0, 0);
+    }
+   
+    .plan-features{
+      align-items: center;
+      padding-left: 0;
+      list-style-type: none; /* remove pontos da lista */
+    } 
+    
+    .plan-button{
+      min-height: 50px;
+      flex-grow: 0; /* flex-grow: 0; off-crescimento da div || flex-grow:1; on-crescimento */
+      border: none;
+      background-color: orangered;
+      color: white;
+      border-radius: 30px;
+      margin: 20px 80px; 
+    }
+    .plan-features > li{
+        padding-bottom: 10px;
+        font-weight: 800;
+    }
+    .number{
+      font-size: 60px;
+    }
+    footer{
+      text-align: center;
+      font-weight: 600;
+      
+    }
+
+    @media (max-width: 1250px){
+      .pricing-container{
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+        
+      }
+      .pricing-plan{
+        min-width: 300px;
+      }
+      
+      
+      .plan-features{
+        height: 40%; 
+        
+      }
+     
+    }
+    
+      
+  
+  </style>
+</head>
+
+<body>
+  <div class="pricing-container">
+    <div class="pricing-plan">
+      <div class="plan-title">Basic</div>
+      <div class="plan-price"><span class="number">$9.99</span><br/>/month</div>
+      <ul class="plan-features">
+        <li>✅ 10GB Storage</li>
+        <li>✅ 1 User</li>
+        <li>🚫 Support</li>
+      </ul>
+      <button class="plan-button">BUY NOW</a>
+    </div>
+    <div class="pricing-plan">
+      <div class="plan-title">Standard</div>
+      <div class="plan-price"><span class="number">$19.99</span><br>/month</div>
+      <ul class="plan-features">
+        <li>✅ 50GB Storage</li>
+        <li>✅ 5 Users</li>
+        <li>✅ Phone &amp; Email Support</li>
+      </ul>
+      <button class="plan-button">BUY NOW</a>
+    </div>
+    <div class="pricing-plan">
+      <div class="plan-title">Premium</div>
+      <div class="plan-price"><span class="number">$49.99</span><br>/month</div>
+      <ul class="plan-features">
+        <li>✅ 100GB Storage</li>
+        <li>✅ 10 Users</li>
+        <li>✅ 24/7 Support</li>
+      </ul>
+      <button class="plan-button">BUY NOW</a>
+    </div>
+  </div>
+  <footer>
+     <p>@EricoVM</p>
+  </footer>
+
+</body>
+
+</html>
